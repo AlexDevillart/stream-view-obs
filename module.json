@@ -1,0 +1,78 @@
+{
+  "id": "stream-view",
+  "name": "stream-view",
+  "title": "Stream View",
+  "description": "This module provides a minimal UI view with automated camera work, ideal for streaming or recording games.",
+  "authors": [
+    {
+      "name": "sPOiDar",
+      "url": "https://github.com/sPOiDar"
+    }
+  ],
+  "version": "2.0.4",
+  "minimumCoreVersion": "10",
+  "compatibleCoreVersion": "12",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "12",
+    "maximum": "12"
+  },
+  "esmodules": [
+    "modules/init.js"
+  ],
+  "styles": [
+    "styles/stream_view.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "es",
+      "name": "Spanish",
+      "path": "lang/es.json"
+    },
+    {
+      "lang": "pt",
+      "name": "Portuguese",
+      "path": "lang/pt.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "stream-view-macros",
+      "label": "Stream View Macros",
+      "path": "./packs/stream-view-macros.db",
+      "type": "Macro",
+      "entity": "Macro"
+    }
+  ],
+  "relationships": {
+    "requires": [
+      {
+        "id": "lib-wrapper",
+        "compatibility": {
+          "minimum": "1.13.0",
+          "verified": "1.13.0"
+        }
+      },
+      {
+        "id": "socketlib",
+        "compatibility": {
+          "minimum": "1.0.11",
+          "verified": "1.0.11"
+        }
+      }
+    ]
+  },
+  "socket": true,
+  "license": "LICENSE",
+  "readme": "README.md",
+  "url": "https://github.com/sPOiDar/fvtt-module-stream-view",
+  "bugs": "https://github.com/sPOiDar/fvtt-module-stream-view/issues",
+  "changelog": "https://github.com/sPOiDar/fvtt-module-stream-view/blob/master/CHANGELOG.md",
+  "manifest": "https://github.com/sPOiDar/fvtt-module-stream-view/raw/master/module.json",
+  "download": "https://github.com/sPOiDar/fvtt-module-stream-view/releases/download/v2.0.4/stream-view-v2.0.4.zip"
+}

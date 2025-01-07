@@ -66,8 +66,6 @@
   "license": "LICENSE",
   "readme": "README.md",
   "url": "https://github.com/AlexDevillart/stream-view-obs",
-  "bugs": "https://github.com/sPOiDar/fvtt-module-stream-view/issues",
-  "changelog": "https://github.com/sPOiDar/fvtt-module-stream-view/blob/master/CHANGELOG.md",
-  "manifest": "https://github.com/sPOiDar/fvtt-module-stream-view/raw/master/module.json",
+  "manifest": "https://raw.githubusercontent.com/AlexDevillart/stream-view-obs/refs/heads/main/module.json",
   "download": "https://github.com/sPOiDar/fvtt-module-stream-view/releases/download/v2.0.4/stream-view-v2.0.4.zip"
 }

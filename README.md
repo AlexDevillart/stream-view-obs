@@ -1,38 +1,47 @@
-# Foundry VTT - Stream View
+Um modo de visualização minimalista, sem distrações, com câmera automatizada — perfeito para transmitir ou gravar partidas sem a “poluição” da interface do Mestre. A ideia é atribuir um usuário não-jogador ao módulo; quando um navegador entra com esse usuário, o Foundry apresenta uma UI enxuta com os recursos abaixo.
 
-![Release](https://github.com/sPOiDar/fvtt-module-stream-view/workflows/Release/badge.svg)
-![Forge Users](https://img.shields.io/badge/dynamic/json?color=blue&label=Forge%20Users&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2Fstream-view)
-![Foundry Version](https://img.shields.io/badge/dynamic/json?color=blue&label=Foundry%20Version&prefix=v&query=%24.compatibleCoreVersion&url=https%3A%2F%2Fgithub.com%2FsPOiDar%2Ffvtt-module-stream-view%2Fraw%2Fmaster%2Fmodule.json)
+Recursos
 
-This module provides a minimal UI view with automated camera work, ideal for streaming or recording games, without all the GM clutter that running a game entails. It works by assigning a non-player user to the module, and when a browser is logged in as that user, Foundry will present a minimal UI, with the following functions:
+Vários modos de câmera
 
-- Multiple camera tracking modes:
-  - _Automatic_ camera mode tracks player character tokens in the scene, adjusting the camera focus to keep them in view.
-  - _Directed_ camera mode tracks the GM's view at all times.
-- In _Automatic_ mode, during combat, the current combatant's token, targets and measured templates are tracked by the camera.
-- Optionally, the view of the current combatant's controlling user can be tracked during combat.
-- Specific tokens can be tracked in _Automatic_ mode by the GM using the token HUD, right-clicking a selection of tokens and clicking the camera icon.
-- If using in-game voice/video chat, tokens for the currently speaking users can be focussed, and a speaking indicator will be shown above their token (GMs will use their currently selected token, if any).
-- Shared popouts (e.g. journal notes/images shown to players) may be auto-closed after a timeout. Alternatively, they may be closed manually from the Stream View toolbar.
-- Camera mode may be toggled dynamically from the Stream View toolbar.
+Automático: acompanha os tokens dos personagens do grupo na cena, ajustando o enquadramento para mantê-los em foco.
 
-## Setup
+Dirigido: espelha a câmera do Mestre o tempo todo.
 
-- Create a dedicated user that will be used to stream your games, we'll call that user `Stream` (this user should not own any actors/tokens).
-- Assign the Stream user `Observer` permissions for all player actors, this will ensure that the stream view shares vision with your party's tokens.
-- Select the Stream user under Foundry VTT `Settings` -> `Configure Settings` -> `Module Settings` -> `Stream View` -> `Stream User`, and save.
-- Log in with your Stream user in a new browser session, for recording.
+Rastreamento ciente de combate (modo Automático): segue o combatente atual, seus alvos e quaisquer templates medidos.
 
-### OBS Studio
+Foco por usuário (opcional): durante o combate, pode seguir a visão do usuário que controla o combatente ativo.
 
-- Add a browser source that points to your Foundry installation's web interface.
-- Right-click on the browser source and choose 'Interact', then log in as your Stream user.
-- ???
-- Profit
+Rastreamento seletivo de tokens: o Mestre pode clicar com o botão direito nos tokens selecionados e usar o ícone de câmera no HUD para fixar o foco.
 
-__Note__: Windows users, please ensure that you're using OBS Studio >= v27.2 if you want to capture Foundry using the Browser Source.
+Integração de voz/vídeo no jogo: foca os tokens de quem está falando e exibe um indicador de fala acima do token (Mestres usam o token atualmente selecionado, se houver).
 
-## TODO
+Controle de pop-outs compartilhados: diários/imagens mostrados aos jogadores podem se fechar automaticamente após um tempo, ou manualmente pela barra de ferramentas do Stream View.
 
-- Record some demonstration videos to show off the features.
-- See if there's any sane way to do Discord voice activity detection, unfortunately there's no tidy solution for this, particularly for hosted Foundry.
+Troca dinâmica de modo: alterne o modo de câmera a qualquer momento pela barra do Stream View.
+
+Configuração
+
+Crie um usuário dedicado (ex.: Stream). Esse usuário não deve possuir atores/tokens.
+
+Conceda permissão Observador a esse usuário para todos os atores dos jogadores, garantindo que a visão do stream seja a mesma do grupo.
+
+Em Settings → Configure Settings → Module Settings → Stream View, selecione Stream User e salve.
+
+Abra uma nova sessão de navegador, entre como o usuário Stream e use essa janela para gravar/transmitir.
+
+OBS Studio
+
+Adicione uma Browser Source apontando para a URL web do seu Foundry.
+
+Clique com o botão direito na fonte → Interact → faça login como o usuário Stream.
+
+Organize sua cena e vá ao ar.
+
+Observação (Windows): use OBS Studio ≥ v27.2 para capturar o Foundry via Browser Source de forma confiável.
+
+A Fazer
+
+Gravar vídeos de demonstração curtos mostrando os recursos.
+
+Investigar detecção de atividade de voz no Discord; não há solução simples, especialmente em Foundry hospedado.
